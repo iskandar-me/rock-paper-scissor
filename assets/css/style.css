@@ -17,7 +17,8 @@ display: none;
 .shape{
   transition: all 0.3s ease;
 }
-#paper:hover,#rock:hover,#scissor:hover{
+
+.shape:hover,#paper:hover,#rock:hover,#scissor:hover{
   box-shadow:0px 0px 3px 20px rgba(256, 256, 256, 0.7);
   opacity: 0.65;
 }
