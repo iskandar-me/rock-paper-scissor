@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:"Barlow Semi Condensed","Arial","sans-serif";
+}
+.InitialContent{
+  /* display: none; */
+}
+.InitialContent.disabled{
+display: none;
+}
+.shape{
+  transition: all 0.3s ease;
+}
+#paper:hover,#rock:hover,#scissor:hover{
+  box-shadow:0px 0px 3px 20px rgba(256, 256, 256, 0.7);
+  opacity: 0.65;
+}
+#paper{
+  box-shadow: 0px 8px 0px 0px #2A45C2;
+}
+#scissor{
+  box-shadow: 0px 8px 0px 0px #C76C1B;
+}
+#rock{
+  box-shadow: 0px 8px 0px 0px #9D1634;
+
+}
+.triangle{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: -1;
+}
