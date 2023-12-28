@@ -9,20 +9,19 @@
       <link rel="stylesheet" href="../../assets/css/style.css" />
       <link rel="stylesheet" href="../../assets/icomoon/selection.json" />
       <link rel="stylesheet" href="../../pages/rules/rules.css" />
-      <script src="https://cdn.tailwindcss.com"></script>
       <link rel="stylesheet" href="free.css">
+      <script src="https://cdn.tailwindcss.com"></script>
    </head>
    <body
-      class="relative bg-[#131537] flex flex-col justify-between items-center w-full h-full max-w-[1440px] ">
-      <div class="container">
+      class="relative  flex flex-col justify-between items-center gap-4  p-4 uppercase text-white w-full bg-[#131537] ">
          <header
             class="header
-             text-white flex justify-between md:gap-80 md:mx-auto border-solid border-[5px] rounded-[20px] border-white mx-4 my-6 md:my-[36px]
+              flex justify-between gap-30 md:gap-80  border-solid border-[5px] rounded-[20px] border- py-6 px-8 m-0  mb-4 md:my-[36px] md:py-4 md:pr-6 md:pl-8 md:mx-auto
             ">
             <!-- LOGO -->
-            <nav class="py-4 pr-6 pl-8">
+            <nav class="">
                <a
-                  class="flex flex-col items-start justify-center cursor-pointer hover:opacity-70"
+                  class="flex flex-col items-start justify-center cursor-pointer hover:opacity-70 tracking-wide"
                   href="../../pages/free/free.html">
                   <h2 class="text-[21px] md:text[40px] font-bold">ROCK</h2>
                   <h2 class="text-[21px] md:text[40px] font-bold">PAPER</h2>
@@ -31,17 +30,17 @@
             </nav>
             <!-- SCORE -->
             <div
-               class="flex flex-col justify-center items-center rounded-[10px] bg-white m-3 px-[30px] py-6 md:px-auto md:my-4 leading-none hover:opacity-70 duration-300 ease-in transition-all">
-               <p class="font-bold text-[10px] text-[#2A45C2] md:text-[24px]">
+               class="flex flex-col justify-center items-center rounded-[10px] bg-white  px-[20px] md:px-[30px] py-4 md:py-6 ml-6  leading-none hover:opacity-70 duration-300 ease-in transition-all">
+               <p class="font-bold text-[10px] text-[#2A45C2] md:text-[24px] tracking-wider ">
                   SCORE
                </p>
                <span class="score text-[#565468] text-[40px] font-bold">0</span>
             </div>
          </header>
-      </div>
+
       <!-- MAIN -->
-      <main class="relative md:mx-auto">
-         <section class="game">
+      <main class="relative ">
+         <section class="game grid relative grid-cols-2 place-items-center row-gap-12 md:gap-24 h-[30rem] pt-4 md:pt-16">
             <button class="choice-btn" data-choice="paper">
               <div class="choice paper">
                 <img src="../../assets/img/paper.svg" alt="Paper" />
@@ -58,25 +57,30 @@
               </div>
             </button>
           </section>
-          <section class="results">
-            <h2 class="results__heading">you picked</h2>
-            <h2 class="results__heading">the house picked</h2>
-            <div class="results__result"></div>
-            <div class="results__result"></div>
+          <!-- RESULTS -->
+          <section class="results hidden grid-cols-2 place-items-center max-w-[1000px] mx-auto gap-2 md:gap-4">
+            <h2 class="results__heading tracking-[0.1rem]  font-bold text-sm md:text-[1.5rem] px-0 py-4 md:pt-[4rem] md:pb-[8rem]">you picked</h2>
+            <h2 class="results__heading tracking-[0.1rem]  font-bold md:text-[1.5rem] px-0 pt-2 pb-4  md:pt-[4rem] md:pb-[8rem]">the house picked</h2>
+            <div class="results__result bg-[#16213d] rounded-full md:scale-125 min-w-[8rem] min-h-[8rem] md:min-w-[10rem] md:min-h-[10rem]"></div>
+            <div class="results__winner md:grid md:place-items-center ">
+               <h3 class="results__text md:text-[3.5rem] md:pb-6"></h3>
+               <button class="play- bg-white outline-none border-[2px] border-solid border-transparent rounded-[0.6rem] text-[var(--dark-text)] md:py-[0.6rem] md:px-[3.5rem]  uppercase tracking-[0.1rem] cursor-pointer focus:border-[var(--outline)]">play again</button>
+            </div>
+            <div class="results__result  bg-[#16213d] rounded-full md:scale-125 min-w-[8rem] min-h-[8rem] md:min-w-[10rem] md:min-h-[10rem]"></div>
           </section>
       </main>
 
       <!-- RULES Button -->
       <button
          id="OpenRules"
-         class="fixed right-4 bottom-5 md:text-right cursor-pointer font-bold text-[16px] text-white tracking-[.1rem] border-[2px] border-white py-3 px-[36px] rounded-[5px] transition-all duration-300 ease-in hover:bg-white hover:text-[#131537] focus:border-[3px] focus:border-white" tabindex="1">
+         class="fixed right-4 bottom-5 md:text-right cursor-pointer font-bold text-[16px]  tracking-[.1rem] border-[2px] border-white py-3 px-[36px] rounded-[5px] transition-all duration-300 ease-in hover:bg-white hover:text-[#131537] focus:border-[3px] focus:border-white" tabindex="1">
          RULES
       </button>
 
       <!-- RULES MODAL -->
       <div
          id="RulesModal"
-         class="hidden z-30 absolute top-[50px] left-[50%] translate-x-[-50%]  bg-white flex-col gap-0 w-full h-full md:w-[400px] md:h-[415px] md:rounded-[8px]">
+         class="hidden z-30 absolute top-[100px] left-[50%] translate-x-[-50%]  bg-white flex-col gap-0 w-full h-full md:w-[400px] md:h-[415px] md:rounded-[8px]">
          <!-- HEADER -->
          <header class="flex justify-center md:justify-between my-24 md:m-8">
             <h2
@@ -84,7 +88,7 @@
                RULES
             </h2>
             <button
-               class="icon-close rounded-[10px] p-4 hidden md:block cursor-pointer text-white hover:bg-red-400 hover:text-red-500"></button>
+               class="icon-close rounded-[10px] p-4 hidden md:block cursor-pointer  hover:bg-red-400 hover:text-red-500"></button>
          </header>
          <!-- MAIN -->
          <main
@@ -97,7 +101,7 @@
       </div>
 
       <!-- BLOCKER -->
-      <div class="blocker hidden absolute bottom-[0%] left-0 w-full h-full bg-black"></div>
+      <div class="blocker hidden absolute top-0  left-0 w-full h-full bg-black" ></div>
       <script src="../../pages/rules/rules.js" defer></script>
       <script src="../../js/main.js" defer></script>
       <script src="./free.js"></script>
