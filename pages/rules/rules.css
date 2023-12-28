@@ -1,34 +1,6 @@
 .triangle-content {
   display: grid;
-  grid-template-columns: repeat(3.1fr);
-  grid-template-rows: repeat(3.1fr);
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 1fr 20px 1fr;
   gap: 24px;
-}
-.paper {
-  grid-row: 1;
-  grid-column: 1;
-}
-.to-west {
-  grid-row: 1px;
-  grid-column: 2px;
-}
-.scissor {
-  grid-row: 1;
-  grid-column: 3;
-}
-.To-Southern-East {
-  grid-row: 2;
-  grid-column: 1;
-}
-.middle{
-  grid-row: 2;
-  grid-column: 2;
-}
-.To-Northern-East {
-  grid-row: 2;
-  grid-column: 3;
-}
-.rock {
-  grid-row: 3;
-  grid-column: 2;
 }

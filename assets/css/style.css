@@ -1,41 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+ @import url(../../assets/icomoon/style.css);
+ @import url(../../assets/css/variable.css);
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:"Barlow Semi Condensed","Arial","sans-serif";
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
-.InitialContent{
-  /* display: none; */
+body {
+  background: radial-gradient(at top, var(--bg-grad-1), var(--bg-grad-2));
+  min-height: 100vh;
+  text-transform: uppercase;
+  color: #fff;
 }
-.InitialContent.disabled{
-display: none;
-}
-.shape{
-  transition: all 0.3s ease;
+/* Main Content */
+.container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 2rem;
 }
 
-.shape:hover,#paper:hover,#rock:hover,#scissor:hover{
-  box-shadow:0px 0px 3px 20px rgba(256, 256, 256, 0.7);
-  opacity: 0.65;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  border: 3px solid var(--outline);
+  border-radius: 20px;
+  padding: 1rem 1.4rem 1rem 2rem;
 }
-#paper{
-  box-shadow: 0px 8px 0px 0px #2A45C2;
-}
-#scissor{
-  box-shadow: 0px 8px 0px 0px #C76C1B;
-}
-#rock{
-  box-shadow: 0px 8px 0px 0px #9D1634;
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #131537;
+  color: #131537;
 }
-.triangle{
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%);
-  z-index: -1;
-}
+

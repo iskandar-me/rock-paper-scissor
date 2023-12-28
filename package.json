@@ -2,7 +2,7 @@
   "type": "module",
   "name": "task-management-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Enjoy Your Time !",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -42,5 +42,14 @@
   },
   "dependencies": {
     "uuid": "^9.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iskandar-tulkinov/rock-paper-scissor.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Iskandar-tulkinov/rock-paper-scissor/issues"
+  },
+  "homepage": "https://github.com/Iskandar-tulkinov/rock-paper-scissor#readme"
 }

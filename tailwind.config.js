@@ -2,7 +2,12 @@
 module.exports = {
   content: ['./index.html'],
   theme: {
-    extend: {},
+    extend: {
+      "scripts": {
+        "build:css": "postcss styles.css -o output.css"
+      }
+
+    },
   },
   plugins: [],
 }
