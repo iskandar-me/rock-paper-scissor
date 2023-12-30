@@ -3,7 +3,7 @@
    position: relative;
    max-width: 700px;
    margin: 0 auto;
-   padding-top: 2rem;
+   padding-top: 1.5rem;
 }
 
 .header {
@@ -11,7 +11,8 @@
    justify-content: space-between;
    align-items: center;
    height: 150px;
-   border: 3px solid var(--outline);
+   flex-shrink: 0;
+   border: 0.18rem solid var(--outline);
    border-radius: 20px;
    padding: 1rem 1.4rem 1rem 2rem;
 }
@@ -38,7 +39,7 @@
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   background: #fff;
+   background: linear-gradient(0deg, #f3f3f3 0%, #fff 100%);
    border-radius: 10px;
    width: 150px;
    height: 100%;
@@ -67,16 +68,17 @@
       "rock rock";
    place-items: center;
    height: 30rem;
-   padding-top: 4rem;
+   margin-top: 4rem;
 }
 .game::before {
    content: "";
    position: absolute;
    width: 100%;
    height: 100%;
-   left: 28%;
-   top: 35%;
-   background: url("../../assets/img/triangle.svg") no-repeat;
+   left: 50%;
+   top: 43%;
+   transform: translate(-50%, -50%);
+   background: url("../../assets/img/triangle.svg") no-repeat bottom;
    z-index: -1;
 }
 
@@ -161,12 +163,14 @@
 .results__heading {
    font-size: 1.5rem;
    letter-spacing: 0.1em;
-   padding: 4rem 0 8rem;
+   width: 100%;
+   display: block;
+   padding: 4.5rem 1rem 3rem;
    color: var(--light-text);
 }
 .results__result {
-   min-width: 8rem;
-   min-height: 8rem;
+   width: 8rem;
+   height: 8rem;
    background: #16213d;
    border-radius: 50%;
    transform: scale(1.4);
@@ -199,15 +203,15 @@
    display: grid;
    place-items: center;
 }
-.winner .choice::after{
-   box-shadow: 0 0 0 40px #293251, 0 0 0 80px #232c4b, 0 0 0 130px #1e2949;
-   animation:  winner 1s forwards;
+.winner .choice::after {
+   box-shadow: 0 0 0 20px #293251, 0 0 0 50px #232c4b, 0 0 0 90px #1e2949;
+   animation: winner 1s forwards;
 }
-@keyframes winner{
-   from{
+@keyframes winner {
+   from {
       opacity: 0;
    }
-   to{
+   to {
       opacity: 1;
    }
 }
@@ -220,7 +224,7 @@
 .play-again {
    background: #fff;
    outline: none;
-   border: 2px solid transparent;
+   border: 0.25rem solid transparent;
    border-radius: 0.6rem;
    color: var(--dark-text);
    padding: 0.6rem 3.5rem;
@@ -234,11 +238,247 @@
    border: 2px solid var(--outline);
 }
 
-.show-modal {
-   opacity: 1;
-   pointer-events: initial;
-}
-
 .hidden {
    display: none;
+}
+
+/*************MOBILE DEVICES *************/
+@media only screen and (max-width: 767px) {
+   /* Main Content */
+   .container {
+      max-width: 375px;
+      margin: 0 auto;
+      padding-top: 1.5rem;
+   }
+
+   .header {
+      height: 96px;
+      padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+   }
+
+   .logo__text {
+      color: var(--light-text);
+      text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+      font-size: 21px;
+      line-height: 16px;
+   }
+
+   .score {
+      width: 80px;
+      height: 72px;
+      flex-shrink: 0;
+      border-radius: 4px;
+      box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+   }
+
+   .score__title {
+      font-size: 10px;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 1.563px;
+   }
+
+   .score__number {
+      font-size: 40px;
+      line-height: 1;
+   }
+
+   /* Game */
+   .game {
+      position: relative;
+      display: grid;
+      grid-template-columns: (repeat(2, 1fr));
+      grid-template-areas:
+         "paper scissors"
+         "rock rock";
+      place-items: center;
+      margin-top: 5rem;
+      height: 18rem;
+      margin: inherit auto;
+   }
+   .game::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: url("../../assets/img/triangle.svg") no-repeat;
+      background-position: top;
+      z-index: -1;
+      transform: translateY(7%) scale(0.7);
+   }
+
+   .choice-btn {
+      border: none;
+      outline: none;
+      background: none;
+      cursor: pointer;
+   }
+   .choice {
+      width: 5.5rem;
+      height: 5.5rem;
+      box-shadow: inset 0 0.2rem var(--shadow-light);
+   }
+   .choice::before,
+   .choice::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(-6.5%, -6.5%);
+      width: 115%;
+      height: 115%;
+   }
+
+   .choice::after {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+   }
+   .choice-btn:focus .choice::after {
+      opacity: 1;
+      box-shadow: 0 0 0 1rem #223351;
+      z-index: -2;
+   }
+
+   .choice img {
+      transform: scale(0.7);
+   }
+
+   .choice.paper::before {
+      box-shadow: 0 0.15rem var(--shadow-med), 0 0.15rem var(--paper-2);
+   }
+   .choice.scissors::before {
+      box-shadow: 0 0.15rem var(--shadow-med), 0 0.15rem var(--scissors-2);
+   }
+   .choice.rock::before {
+      box-shadow: 0 0.15rem var(--shadow-med), 0 0.15rem var(--rock-2);
+   }
+
+   .choice-btn[data-choice="paper"] {
+      grid-area: paper;
+   }
+   .choice-btn[data-choice="scissors"] {
+      grid-area: scissors;
+   }
+   .choice-btn[data-choice="rock"] {
+      grid-area: rock;
+   }
+
+   /* Results */
+   .results {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      place-items: center;
+      grid-template-areas:
+         "you-picked ai-picked"
+         "you-title ai-title";
+      gap: 2rem;
+      place-items: center;
+      margin: 6rem auto 0;
+      height: fit-content;
+   }
+
+   .results__heading {
+      display: block;
+      padding: 0rem;
+      /* margin: 4rem inherit; */
+      text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 32px;
+      letter-spacing: 1.875px;
+      text-align: center;
+      width: 100%;
+   }
+   .results__result {
+      width: 5rem;
+      height: 5rem;
+      background: #16213d;
+      border-radius: 50%;
+      transform: scale(1.2);
+      z-index: -1;
+   }
+
+   .results__heading:first-of-type {
+      grid-area: you-title;
+   }
+   .results__heading:last-of-type {
+      grid-area: ai-title;
+   }
+   .results__result:first-of-type {
+      grid-area: you-picked;
+   }
+   .results__result:last-of-type {
+      grid-area: ai-picked;
+   }
+
+   .results.show-winner {
+      gap: 1rem 2rem;
+      place-items: center;
+      grid-template-rows: 200px 40px 130px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+         "you-picked  ai-picked"
+         "you-title  ai-title"
+         "result-winner result-winner";
+      margin: 2rem auto;
+   }
+
+   .results__winner {
+      grid-area: result-winner;
+      display: grid;
+      place-items: center;
+      height: fit-content;
+   }
+   .winner {
+      max-height: 5rem;
+      max-width: 5rem;
+   }
+   .winner .choice::after {
+      box-shadow: 0 0 0 10px #293251, 0 0 0 20px #232c4b, 0 0 0 40px #1e2949;
+      animation: winner 1s forwards;
+      z-index: -5;
+   }
+   @keyframes winner {
+      from {
+         opacity: 0;
+      }
+      to {
+         opacity: 1;
+      }
+   }
+   .results__text {
+      padding-bottom: 1.5rem;
+      color: var(--light-text);
+      text-align: center;
+      text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+      font-size: 56px;
+      font-weight: 700;
+      line-height: normal;
+   }
+   .play-again {
+      padding: 0.6rem 3.5rem;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 2.5px;
+   }
+   .play-again:focus {
+      border: 2px solid var(--outline);
+   }
+   .hidden {
+      display: none;
+   }
+}
+
+/*  */
+@media only screen and (max-width: 400px) {
+   .container {
+      margin: inherit 1.3rem;
+   }
+   .header {
+      margin: inherit 1.5rem;
+   }
 }
