@@ -1,6 +1,140 @@
-.triangle-content {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: 1fr 20px 1fr;
-  gap: 24px;
+@import url(../../pages/free/free.css);
+body,
+html {
+   height: 100%;
+   position: relative;
+}
+.blocker {
+  display: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: #000;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+}
+.blocker.active{
+  display: block;
+opacity: 0.8;
+overflow-y: hidden;
+
+}
+/* Rules Button */
+.open-rules-btn{
+   position: absolute;
+   bottom: 2rem;
+   right: 2rem;
+   background: none;
+   outline: none;
+   border: 2px solid #fff;
+   border-radius: 0.6rem;
+   color: var(--light-text);
+   padding: 0.6rem 2.5rem;
+   font-family: inherit;
+   text-transform: inherit;
+   font-size: 1.3rem;
+   letter-spacing: 0.1em;
+   cursor: pointer;
+}
+.open-rules-btn:focus {
+   border: 2px solid #fff;
+   background-color: #fff;
+   color: var(--dark-text);
+}
+.open-rules-btn:hover{
+  background-color: #fff;
+  color: var(--dark-text);
+}
+/* RULES MODAL */
+.rules {
+   position: absolute;
+   top: 10%;
+   left: 50%;
+   transform: translate(-50%);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 400px;
+   height: 415px;
+   flex-shrink: 0;
+   border: none;
+   border-radius: 10px;
+   background-color: #fff;
+   z-index: 1;
+   padding: 32px;
+   display: none;
+}
+.rules.active{
+  display: flex;
+}
+.rules__header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.rules__title {
+   color: #3b4262;
+   color: #000;
+   font-size: 32px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 1;
+}
+
+.close__btn {
+   border: none;
+
+   border-radius: 10px;
+   cursor: pointer;
+}
+.close__btn:hover {
+   background: red;
+}
+
+.icon-close {
+   flex-shrink: 0;
+   padding: 10px;
+}
+.rules__img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.close__btn.phone {
+   display: none;
+}
+
+@media only screen and (max-width: 768px) {
+   .rules {
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 0;
+      display: none;
+   }
+   .rules__header {
+      padding-top: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .close__btn {
+      display: none;
+   }
+   .close__btn:hover {
+      background: red;
+   }
+
+   .close__btn.phone {
+      display: block;
+      margin-bottom: 60px;
+   }
 }

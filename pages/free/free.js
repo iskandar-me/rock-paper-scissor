@@ -14,11 +14,17 @@ document.addEventListener('DOMContentLoaded',()=>{
     },
   ]
   // const choiceButtons=document.querySelectorAll('.choice-btn');
-  const gameDiv=document.querySelector('.game');
-  const resultsDiv=document.querySelector('.results');
-  const resultDivs=document.querySelectorAll('.results__result');
+  const choiceButtons = document.querySelectorAll(".choice-btn");
+  const gameDiv = document.querySelector(".game");
+  const resultsDiv = document.querySelector(".results");
+  const resultDivs = document.querySelectorAll(".results__result");
+
   const resultWinner = document.querySelector('.results__winner');
   const resultText = document.querySelector('.results__text');
+
+  const playAgainBtn = document.querySelector('.play-again');
+  const scoreNumber = document.querySelector('.score__number')
+  let score = 0
   // Game Logic
   choiceButtons.forEach((button)=>{
     button.addEventListener('click',() => {
@@ -50,38 +56,53 @@ function displayResults(results) {
   });
 
   gameDiv.classList.toggle("hidden");
-  resultsDiv.classList.toggle('hidden')
+  resultsDiv.classList.remove('hidden')
   resultsDiv.classList.toggle('grid')
 }
 
 function displayWinner(results){
   setTimeout(()=>{
     const userWins= isWinner(results)
-    const aiWins= isWinner(results);
+    const aiWins= isWinner(results.reverse());
 
     if(userWins){
-      resultText.innerText='YOU WIN'
+      resultText.innerText='YOU WIN';
+      resultDivs[0].classList.toggle('winner');
+      keepScore(1);
     }else if (aiWins){
-      resultText.innerText='YOU LOOSE'
+      resultText.innerText='YOU LOOSE';
+      resultDivs[1].classList.toggle('winner');
+      keepScore(-1);
     }else{
-      resultText.innerText='DRAW'
+      resultText.innerText='DRAW';
     }
+
+  resultWinner.classList.remove('hidden');
+  resultsDiv.classList.toggle('show-winner');
+  console.log(resultText.innerText);
   },1000)
 
-  resultWinner.classList.toggle('hidden')
-  resultsDiv.classList.toggle('show-winner')
 }
+
+function isWinner(results){
+  return results[0].beats===results[1].name;
+}
+
+function keepScore(point){
+  score+=point
+  scoreNumber.innerText=score
+}
+playAgainBtn.addEventListener('click',()=>{
+    gameDiv.classList.toggle('hidden')
+    resultsDiv.classList.toggle('hidden')
+
+    resultDivs.forEach(resultDiv=>{
+      resultDiv.innerHTML='';
+      resultDiv.classList.remove('winner');
+    })
+
+    resultText.innerText=''
+    resultWinner.classList.toggle('hidden')
+    resultsDiv.classList.toggle('show-winner')
 })
-
-
-// const =document.querySelectorAll('.shape')
-// shapes.forEach((shape)=>{
-//   shape.addEventListener('click',()=>{
-//     const InitialContent = document.getElementById('InitialContent')
-//     InitialContent.classList.toggle('disabled')
-//   })
-// });
-
-// const OpenRules = document.getElementById('OpenRules')
-// OpenRules.addEventListener('click',()=>{
-//   document.getElementById('RulesModal').classList.remove('hidden')
+})//

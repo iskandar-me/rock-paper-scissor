@@ -1,14 +1,127 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+/*   */
  @import url(../../assets/icomoon/style.css);
  @import url(../../assets/css/variable.css);
+ @import url(../../assets/css/variable.css);
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Barlow Semi Condensed", sans-serif;
 }
 body {
+  font-family: "Barlow Semi Condensed", sans-serif;
   background: radial-gradient(at top, var(--bg-grad-1), var(--bg-grad-2));
+  min-height: 100vh;
+  text-transform: uppercase;
+}
+a{
+  text-decoration: none;
+}
+/* Utility */
+.transition{
+  transition: all 0.3s ease;
+}
+
+
+/* Main index.html */
+.main-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  height: 100%;
+  width: 100%;
+}
+
+.main-header {
+  border: 4px solid #fff;
+  border-radius: 10px;
+  margin:1rem auto ;
+  width: 25rem;
+  height: 100% ;
+  padding: 1rem 4rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+
+}
+.main-header a{
+  color: inherit;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.main-header a span{
+  display: block;
+}
+.main-header:hover {
+background-color : crimson;
+color: black;
+}
+.main-body main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.main-choice{
+border: 5px solid white;
+border-radius: 50%;
+height: 250px;
+width:250px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+cursor: pointer;
+color: var(--light-text);
+}
+.main-choice:last-child{
+  border-color: blue;
+  color: var(--rock-2);
+}
+.main-choice:hover{
+  background-color: #fff;
+  color: var(--score-text);
+}
+.main-choice:last-child:hover{
+  background-color: greenyellow;
+}
+.main-choice {
+  font-size: 2rem;
+  line-height: 1.2;
+
+  font-weight: bold;
+  text-align: center;
+  place-items: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #000;
+}
+.footer span{
+  color: #fff;
+  font-weight: bold;
+}
+.footer a{
+font-size: 2rem;
+padding: 1rem 2rem;
+font-weight: bold;
+
+}
+.footer a:hover{
+color: crimson;
+
 }

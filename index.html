@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./assets/css/normalize.css">
-  <link rel="stylesheet" href="./assets/css/output.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/variable.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="flex flex-col justify-between items-center gap-4 md:gap-5 bg-[#131537]  w-full h-full text-[#131537] ">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Rock Paper Scissors</title>
+      <!-- FavIcon -->
+      <link
+         rel="shortcut icon"
+         href="./assets/img/rps.png"
+         type="image/x-icon" />
+         <!-- CSS links -->
+      <link rel="stylesheet" href="./assets/css/style.css" />
+   </head>
+   <body class="main-body">
+      <header class="main-header transition">
+         <a href="index.html">
+            TRY
+            <span>ROCK-PAPER-SCISSORS</span>
+         </a>
+      </header>
+      <main>
+            <a  class="main-choice transition" href="./pages/free/free.html">Free </a>
+            <a  class="main-choice transition" href="./pages/premium/index.html">Bonus</a>
+      </main>
 
-  <header class=" m-4 border-solid border-[2px] rounded-xl border-[#fff] text-white hover:text-[#131537]  hover:bg-[#fff]  transition-all duration-300 ease-in text-center">
-    <a class="text-[16px]  md:text-[36px] font-bold "
-    href="index.html">TRY <span class="block px-3 ">ROCK-PAPER-SCISSORS</span></a>
-  </header>
-
-  <main class="flex flex-col items-center gap-8 w-full h-full mx-auto">
-    <div class="shape border-blue-500 border-[8px] md:border-[15px] border-solid rounded-full w-60 h-60
-  flex justify-center  items-center
-  ">
-    <a class="text-[60px] text-white font-bold pt-16 cursor-pointer w-full h-full  text-center bg-gray-600 hover:bg-blue-300 hover:text-[#131537] rounded-full transition-all duratio-300 ease-in " href="./pages/free/free.html">Free </a>
-    </div>
-    <div class="shape border-yellow-500 border-[8px] md:border-[15px] border-solid rounded-full w-60 h-60 flex justify-center items-center">
-    <a class="text-[40px]  font-bold pt-20 cursor-pointer w-full h-full  text-center text-white bg-gray-700 hover:bg-blue-400  hover:text-[#131537] rounded-full transition-all duration-300 ease-in" href="./pages/premium/index.html">Premium</a>
-    </div>
-  </main>
-
-  <footer class="  flex items-center justify-center gap-5  w-full h-full">
-    <span class="text-white  text-[14px] md:text-[18px]">Created by</span>
-    <a class="hover:text-white font-bold text-[18px] md:text-[36px] text-amber-700 duration-300 ease-in transition-all" href="https://github.com/Iskandar-tulkinov/" target="_blank">
-      Iskandar
-    </a>
-  </footer>
-</body>
+      <footer class="footer">
+         <span class="">Created by</span>
+         <a
+            class="transition"
+            href="https://github.com/Iskandar-tulkinov/"
+            target="_blank">
+            Iskandar
+         </a>
+      </footer>
+   </body>
 </html>
