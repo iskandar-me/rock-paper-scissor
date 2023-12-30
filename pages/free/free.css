@@ -76,7 +76,7 @@
    width: 100%;
    height: 100%;
    left: 50%;
-   top: 43%;
+   top: 35%;
    transform: translate(-50%, -50%);
    background: url("../../assets/img/triangle.svg") no-repeat bottom;
    z-index: -1;
@@ -157,7 +157,7 @@
       "you-picked ai-picked";
    max-width: 1000px;
    margin: 0 auto;
-   gap: 3rem;
+   gap: 5rem;
 }
 
 .results__heading {
@@ -191,7 +191,8 @@
 }
 
 .results.show-winner {
-   gap: 3rem;
+   gap:1rem  5rem;
+   place-items: center;
    grid-template-columns: repeat(3, 1fr);
    grid-template-areas:
       "you-title . ai-title"
@@ -373,10 +374,10 @@
       grid-template-areas:
          "you-picked ai-picked"
          "you-title ai-title";
-      gap: 2rem;
+      gap: 3rem;
       place-items: center;
       margin: 6rem auto 0;
-      height: fit-content;
+
    }
 
    .results__heading {
