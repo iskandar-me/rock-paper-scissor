@@ -465,7 +465,7 @@
   }
 
   .results.show-winner {
-     gap: 1rem 2rem;
+     gap: 1rem 3rem;
      place-items: center;
      grid-template-rows: 200px 40px 130px;
      grid-template-columns: repeat(2, 1fr);
