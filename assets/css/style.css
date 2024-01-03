@@ -135,7 +135,20 @@ padding: 1rem;
 color: crimson;
 
 }
-
+.home-link{
+  color: var(--light-text);
+  border: 2px solid #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 15px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+.home-link:hover{
+  background:#fff;
+  color: var(--dark-text);
+}
 /* MEDIA */
 @media only screen and(max-width:767px) {
   .main-body{
@@ -143,6 +156,17 @@ color: crimson;
   }
   .main-header{
     width: 100%;
+  }
+
+  .home-link{
+    color: var(--light-text);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px 8px;
+    position: fixed;
+    top: 6px;
+    left: 6px;
   }
 
 }
