@@ -14,7 +14,7 @@ closeIcons.forEach((closeIcon)=>{
 closeIcon.addEventListener('click',()=>{
   RulesModal.classList.remove('active')
   blocker.classList.remove('active')
-  document.body.style.overflow='scroll'
+  document.body.style.overflow='initial'
 
   })
 })
@@ -22,7 +22,7 @@ closeIcon.addEventListener('click',()=>{
 blocker.addEventListener('click',()=>{
   RulesModal.classList.remove('active')
   blocker.classList.remove('active')
-  document.body.style.overflow='scroll'
+  document.body.style.overflow='initial'
 
 })
 

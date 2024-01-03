@@ -13,12 +13,10 @@ document.addEventListener('DOMContentLoaded',()=>{
       beats:'paper'
     },
   ]
-  // const choiceButtons=document.querySelectorAll('.choice-btn');
   const choiceButtons = document.querySelectorAll(".choice-btn");
   const gameDiv = document.querySelector(".game");
   const resultsDiv = document.querySelector(".results");
   const resultDivs = document.querySelectorAll(".results__result");
-
   const resultWinner = document.querySelector('.results__winner');
   const resultText = document.querySelector('.results__text');
 

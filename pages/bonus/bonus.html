@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Rock Paper Scissors Lizard Spock</title>
+      <link rel="stylesheet" href="../../assets/css/normalize.css" />
+      <link rel="stylesheet" href="../../pages/rules/rules.css" />
+      <link rel="stylesheet" href="../../assets/css/style.css" />
+      <link rel="stylesheet" href="bonus.css" />
+   </head>
+   <body>
+      <div class="container">
+         <header class="header">
+            <!-- LOGO -->
+            <div class="logo">
+               <a class="logo__link" href="../../pages/bonus/bonus.html">
+                  <h2 class="logo__text ">ROCK</h2>
+                  <h2 class="logo__text">PAPER</h2>
+                  <h2 class="logo__text">SCISSORS</h2>
+                  <h2 class="logo__text">Lizard</h2>
+                  <h2 class="logo__text">spock</h2>
+               </a>
+            </div>
+            <!-- SCORE -->
+            <div class="score">
+               <p class="score__title">SCORE</p>
+               <span class="score__number">0</span>
+            </div>
+         </header>
+
+         <!-- MAIN -->
+         <main class="main">
+            <section class="game">
+              <button class="choice-btn" data-choice="scissors">
+                 <div class="choice scissors">
+                    <img src="../../assets/img/scissors.svg" alt="Scissors" />
+                 </div>
+              </button>
+               <button class="choice-btn" data-choice="paper">
+                  <div class="choice paper">
+                     <img src="../../assets/img/paper.svg" alt="Paper" />
+                  </div>
+               </button>
+               <button class="choice-btn" data-choice="rock">
+                  <div class="choice rock">
+                     <img src="../../assets/img/rock.svg" alt="Rock" />
+                  </div>
+               </button>
+               <button class="choice-btn" data-choice="lizard">
+                  <div class="choice lizard">
+                     <img src="../../assets/img/lizard.svg" alt="Lizard" />
+                  </div>
+               </button>
+               <button class="choice-btn" data-choice="spock">
+                  <div class="choice spock">
+                     <img src="../../assets/img/spock.svg" alt="Spock" />
+                  </div>
+               </button>
+            </section>
+            <!-- RESULTS -->
+            <section class="results hidden">
+               <h2 class="results__heading">you picked</h2>
+               <h2 class="results__heading">the house picked</h2>
+               <div class="results__result"></div>
+               <div class="results__winner hidden">
+                  <h3 class="results__text"></h3>
+                  <button class="play-again">play again</button>
+               </div>
+               <div class="results__result"></div>
+            </section>
+         </main>
+
+         <!-- RULES Button -->
+      </div>
+
+      <!-- Modal opener  button -->
+      <button class="open-rules-btn  transition">RULES</button>
+
+      <!-- RULES MODAL -->
+      <div class="rules">
+         <header class="rules__header">
+            <h3 clas="rules__title">RULES</h3>
+            <button class="close__btn transition">
+               <img
+                  class="icon-close"
+                  src="../../assets/img/close.svg"
+                  alt="icon-close" />
+            </button>
+         </header>
+         <section class="rules__img">
+            <img src="../../assets/img/bonus/bonus-rules.svg" alt="Bonus rules" />
+         </section>
+         <button class="close__btn phone transition">
+            <img
+               class="icon-close"
+               src="../../assets/img/close.svg"
+               alt="icon-close" />
+         </button>
+      </div>
+      <!-- BLOCKER -->
+      <div class="blocker"></div>
+      <script src="../../pages/rules/rules.js" defer></script>
+      <script src="../../js/main.js" defer></script>
+      <!-- <script src="../../pages/free/free.js"></script> -->
+      <script src="./bonus.js"></script>
+   </body>
 </html>

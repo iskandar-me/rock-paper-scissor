@@ -78,7 +78,7 @@
    left: 50%;
    top: 35%;
    transform: translate(-50%, -50%);
-   background: url("../../assets/img/triangle.svg") no-repeat bottom;
+   background: url("../../assets/img/free/triangle.svg") no-repeat bottom;
    z-index: -1;
 }
 
