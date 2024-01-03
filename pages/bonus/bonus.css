@@ -241,6 +241,7 @@
 .winner .choice::after {
   box-shadow: 0 0 0 20px #293251, 0 0 0 50px #232c4b, 0 0 0 90px #1e2949;
   animation: winner 1s forwards;
+  z-index: -50;
 }
 @keyframes winner {
   from {
@@ -489,7 +490,7 @@
   .winner .choice::after {
      box-shadow: 0 0 0 10px #293251, 0 0 0 20px #232c4b, 0 0 0 40px #1e2949;
      animation: winner 1s forwards;
-     z-index: -50;
+     /* z-index: -50; */
   }
   @keyframes winner {
      from {
