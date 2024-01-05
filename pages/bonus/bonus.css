@@ -61,7 +61,7 @@
 }
 /* Main */
 .main{
-  margin: 5rem auto;
+  margin: 1rem auto;
   height: 100%;
 }
 /* Game */
@@ -76,8 +76,8 @@
       ". lizard . rock .";
   place-items: center;
   height: 30rem;
-  margin-top: 6rem;
-  margin-bottom: 4rem;
+  margin-top: 1.5rem;
+  padding-bottom: 4rem;
 }
 .game::before {
   content: "";
@@ -88,7 +88,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   background: url("../../assets/img/bonus/pentagon.svg") no-repeat center;
-  background-size: 470px;
+  background-size: 350px;
   z-index: -1;
 }
 
@@ -97,6 +97,12 @@
   outline: none;
   background: none;
   cursor: pointer;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+.choice-btn:hover{
+  opacity: 0.8;
+  transform: translateY(10px);
 }
 .choice {
   position: relative;
@@ -159,27 +165,35 @@
   grid-area: paper;
   position: absolute;
   left: 0;
-  transform: translateX(-100%);
+  top: 0;
+  transform: translate(-120%, 0%);
 }
 .choice-btn[data-choice="scissors"] {
   grid-area: scissors;
   position: relative;
   top: 0;
-  transform: translateY(-50%);
+  transform: translateY(-10%);
 }
 .choice-btn[data-choice="rock"] {
   grid-area: rock;
-  margin-top: 8rem;
+  position: relative;
+  left: 0;
+  top: 0;
+  transform: translate( -50% , 78%);
 }
 .choice-btn[data-choice="lizard"] {
   grid-area: lizard;
-  margin-top: 8rem;
+  position: relative;
+  left: 0;
+  top: 0;
+  transform: translate( 50% , 80%);
 }
 .choice-btn[data-choice="spock"] {
   grid-area: spock;
   position: absolute;
   left: 0;
-  transform: translateX(50%);
+  top: 0;
+  transform: translate(70%, 0%);
 }
 /* Results */
 .results {
@@ -269,11 +283,16 @@
   font-size: 1.3rem;
   letter-spacing: 0.1em;
   cursor: pointer;
+
 }
 .play-again:focus {
   border: 2px solid var(--outline);
 }
-
+.play-again:hover{
+  color: var(--light-text);
+  background-color: var(--bg-grad-2);
+  border: inherit solid;
+}
 .hidden {
   display: none;
 }
@@ -401,35 +420,40 @@
   }
 
 
-.choice-btn[data-choice="paper"] {
-  grid-area: paper;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: translate(-60% , 100%);
-}
-.choice-btn[data-choice="scissors"] {
-  grid-area: scissors;
-  position: relative;
-  top: 0;
-  left: 0;
-  transform: translate(0% , -20%);
-}
-.choice-btn[data-choice="rock"] {
-  grid-area: rock;
-  margin-top: 8rem;
-}
-.choice-btn[data-choice="lizard"] {
-  grid-area: lizard;
-  margin-top: 8rem;
-}
-.choice-btn[data-choice="spock"] {
-  grid-area: spock;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: translate(-50%, 100%);
-}
+  .choice-btn[data-choice="paper"] {
+    grid-area: paper;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-60%, -10%);
+  }
+  .choice-btn[data-choice="scissors"] {
+    grid-area: scissors;
+    position: relative;
+    top: 0;
+    transform: translateY(-25%);
+  }
+  .choice-btn[data-choice="rock"] {
+    grid-area: rock;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate( -10% , 100%);
+  }
+  .choice-btn[data-choice="lizard"] {
+    grid-area: lizard;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate( 20% , 100%);
+  }
+  .choice-btn[data-choice="spock"] {
+    grid-area: spock;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-35%, -10%);
+  }
 
   /* Results */
   .results {
@@ -466,7 +490,7 @@
   }
 
   .results.show-winner {
-     gap: 1rem 3rem;
+     gap: 1rem 6rem;
      place-items: center;
      grid-template-rows: 200px 40px 130px;
      grid-template-columns: repeat(2, 1fr);

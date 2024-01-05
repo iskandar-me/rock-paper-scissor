@@ -87,7 +87,13 @@
    outline: none;
    background: none;
    cursor: pointer;
+   transition: all 0.3s ease;
+
 }
+.choice-btn:hover{
+   opacity: 0.8;
+   transform: translateY(5px);
+ }
 .choice {
    position: relative;
    width: 10rem;
@@ -238,7 +244,11 @@
 .play-again:focus {
    border: 2px solid var(--outline);
 }
-
+.play-again:hover{
+   color: var(--light-text);
+   background-color: var(--bg-grad-2);
+   border: 0.25rem solid #fff ;
+ }
 .hidden {
    display: none;
 }
