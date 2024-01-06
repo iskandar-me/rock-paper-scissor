@@ -9,26 +9,27 @@
 </head>
 <body style="background-color:#16213d;;" >
 
-    <button class="open-rules-btn transition" >
+    <button onclick="openModal()" class="open-rules-btn transition" >
       RULES
     </button>
 
-<div class="blocker"></div>
+<div onclick="closeModal()" class="background"></div>
 <!-- RULES MODAL -->
 <div class="rules">
   <header class="rules__header">
     <h3 clas="rules__title">RULES</h3>
-    <button class="close__btn transition">
+    <button onclick="closeModal()" class="close__btn transition">
       <img class="icon-close" src="../../assets/img/close.svg" alt="icon-close">
     </button>
   </header>
   <section class="rules__img">
-    <img  src="../../assets/img/rules-modal.svg" alt="Rules modal">
+    <img  src="../../assets/img/free/free-rules.svg" alt="Rules modal">
   </section>
-  <button class="close__btn phone transition">
+  <button onclick="closeModal()" class="close__btn phone transition">
     <img class="icon-close" src="../../assets/img/close.svg" alt="icon-close">
   </button>
 </div>
+
   <script src="rules.js"></script>
 </body>
 </html>

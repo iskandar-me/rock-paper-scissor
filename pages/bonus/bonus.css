@@ -3,7 +3,7 @@
   position: relative;
   max-width: 700px;
   margin: 0 auto;
-  padding-top: 1.5rem;
+  /* padding-top: 1rem; */
 }
 
 .header {
@@ -308,7 +308,7 @@
   .container {
      max-width: 375px;
      margin: 0 auto;
-     padding-top: 3.5rem;
+     /* padding-top: 1rem; */
   }
 
   .header {

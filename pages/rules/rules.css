@@ -5,7 +5,7 @@ html {
    position: relative;
    display: block;
 }
-.blocker {
+.background{
   display: none;
    position: absolute;
    top: 0;
@@ -16,7 +16,7 @@ html {
    opacity: 0;
    color: #fff;
 }
-.blocker.active{
+.background.active{
   display: block;
 opacity: 0.5;
 overflow-y: hidden;

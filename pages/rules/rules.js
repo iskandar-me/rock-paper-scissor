@@ -1,47 +1,34 @@
 "use strict";
-const closeIcons = document.querySelectorAll('.icon-close');
-const blocker= document.querySelector('.blocker');
-const RulesModal = document.querySelector('.rules')
-const OpenRules = document.querySelector('.open-rules-btn')
+const closeIcons = document.querySelectorAll(".icon-close");
+const background = document.querySelector(".background");
+const RulesModal = document.querySelector(".rules");
+const openRulesBtn = document.querySelector(".open-rules-btn");
 
-OpenRules.addEventListener('click',()=>{
-  RulesModal.classList.toggle('active')
-  blocker.classList.toggle('active')
-  document.body.style.overflow='hidden'
-})
-
-closeIcons.forEach((closeIcon)=>{
-closeIcon.addEventListener('click',()=>{
-  RulesModal.classList.remove('active')
-  blocker.classList.remove('active')
-  document.body.style.overflow='initial'
-
-  })
-})
-
-blocker.addEventListener('click',()=>{
-  RulesModal.classList.remove('active')
-  blocker.classList.remove('active')
-  document.body.style.overflow='initial'
-
-})
-
-// Get the open-rules-btn element
-const openRulesBtn = document.querySelector('.open-rules-btn');
-
-// Add an event listener for window resize
-window.addEventListener('resize', function() {
-  // Check the window width
-  if (window.innerWidth < 768) {
-    // If window width is less than 768px, add the "phone" class
-    openRulesBtn.classList.add('phone');
-  } else {
-    // If window width is 768px or more, remove the "phone" class
-    openRulesBtn.classList.remove('phone');
-  }
-});
+const openModal = () => {
+   RulesModal.classList.toggle("active");
+   background.classList.toggle("active");
+   document.body.style.overflow = "hidden";
+};
+const closeModal = () => {
+   RulesModal.classList.remove("active");
+   background.classList.remove("active");
+   document.body.style.overflow = "initial";
+};
+const backgorundBody = () => {
+   closeModal();
+};
+// window.addEventListener('resize', function() {
+//   // Check the window width
+//   if (window.innerWidth < 768) {
+//     // If window width is less than 768px, add the "phone" class
+//     openRulesBtn.classList.add('phone');
+//   } else {
+//     // If window width is 768px or more, remove the "phone" class
+//     openRulesBtn.classList.remove('phone');
+//   }
+// });
 
 // Optionally, you can also check the initial window width on page load
-if (window.innerWidth < 768) {
-  openRulesBtn.classList.add('phone');
-}
+// if (window.innerWidth < 768) {
+//   openRulesBtn.classList.add('phone');
+// }

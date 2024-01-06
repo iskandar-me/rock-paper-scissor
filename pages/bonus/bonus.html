@@ -10,8 +10,8 @@
       <link rel="stylesheet" href="bonus.css" />
    </head>
    <body>
+      <a class="home-link transition" href="../../index.html" title="Go to main page">home</a>
      <div class="container">
-        <a class="home-link transition" href="../../index.html" title="Go to main page">home</a>
          <header class="header">
             <!-- LOGO -->
             <div class="logo">
@@ -76,13 +76,15 @@
       </div>
 
       <!-- Modal opener  button -->
-      <button class="open-rules-btn  transition">RULES</button>
+      <button onclick="openModal()" class="open-rules-btn transition">
+         RULES
+      </button>
 
       <!-- RULES MODAL -->
       <div class="rules">
          <header class="rules__header">
             <h3 clas="rules__title">RULES</h3>
-            <button class="close__btn transition">
+            <button onclick="closeModal()" class="close__btn transition">
                <img
                   class="icon-close"
                   src="../../assets/img/close.svg"
@@ -90,9 +92,9 @@
             </button>
          </header>
          <section class="rules__img">
-            <img src="../../assets/img/bonus/bonus-rules.svg" alt="Bonus rules" />
+            <img src="../../assets/img/bonus/bonus-rules.svg" alt="Rules modal" />
          </section>
-         <button class="close__btn phone transition">
+         <button onclick="closeModal()" class="close__btn phone transition">
             <img
                class="icon-close"
                src="../../assets/img/close.svg"
@@ -100,7 +102,8 @@
          </button>
       </div>
       <!-- BLOCKER -->
-      <div class="blocker"></div>
+      <div onclick="closeModal()" class="background"></div>
+
       <script src="../../pages/rules/rules.js" defer></script>
       <script src="../../js/main.js" defer></script>
       <!-- <script src="../../pages/free/free.js"></script> -->
